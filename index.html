@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Руслан Бикбулатов — Продуктовый дизайнер</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Manrope', -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+
+    /* Шапка */
+    .header {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+
+    .header__avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 24px;
+      background: #e5e5e5;
+    }
+
+    .header__name {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header__role {
+      margin: 0 0 24px;
+      font-size: 1.125rem;
+      color: #666;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header__contacts {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .header__contacts a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .header__contacts a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* Карточки проектов */
+    .projects {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .projects__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .project-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .project-card__content {
+      padding: 24px;
+    }
+
+    .project-card__title {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .project-card__description {
+      margin: 0 0 12px;
+      font-size: 0.9375rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .project-card__meta {
+      font-size: 0.8125rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img class="header__avatar" src="images/Avatar.png" alt="Руслан Бикбулатов">
+
+    <h1 class="header__name">Руслан Бикбулатов</h1>
+    <p class="header__role">
+      Продуктовый дизайнер в Ростелеком ИТ. Люблю работать над сложными сервисами. Живу в Уфе.
+    </p>
+
+    <nav class="header__contacts">
+      <a href="https://t.me/ruslanbikbul">Telegram</a>
+      <a href="mailto:bikbulanz@gmail.com">Email</a>
+    </nav>
+  </header>
+
+  <main class="projects">
+    <h2 class="projects__title">Проекты</h2>
+
+    <a href="#" class="project-card">
+      <img class="project-card__image" src="images/Task-tracker.png" alt="Таск-трекер и графический редактор">
+      <div class="project-card__content">
+        <h3 class="project-card__title">Таск-трекер и графический редактор</h3>
+        <p class="project-card__description">Импортозамещение крупных зарубежных сервисов</p>
+        <span class="project-card__meta">NDA · Ноябрь 2022 — по н.в. (РТК ИТ)</span>
+      </div>
+    </a>
+
+    <a href="projects/samoylet.html" class="project-card">
+      <img class="project-card__image" src="images/Samolet_plus.png" alt="Самолет Плюс">
+      <div class="project-card__content">
+        <h3 class="project-card__title">Самолет Плюс</h3>
+        <p class="project-card__description">«Самолет Плюс» – это синергия онлайн-платформы и офисов услуг по всей России. На платформе собраны все сервисы для покупки, продажи, аренды недвижимости, а также различные дополнительные услуги.</p>
+        <span class="project-card__meta">Январь 2022 — Июнь 2022 (Tiqum)</span>
+      </div>
+    </a>
+
+    <a href="projects/swiftbook.html" class="project-card">
+      <img class="project-card__image" src="images/Swiftbook.png" alt="SwiftBook">
+      <div class="project-card__content">
+        <h3 class="project-card__title">SwiftBook</h3>
+        <p class="project-card__description">Онлайн-школа мобильной разработки и сообщество разработчиков под Swift и Kotlin</p>
+        <span class="project-card__meta">Август 2021 — Ноябрь 2022 (Tiqum)</span>
+      </div>
+    </a>
+
+    <a href="projects/island-soul.html" class="project-card">
+      <img class="project-card__image" src="images/Island Soul.png" alt="Island Soul">
+      <div class="project-card__content">
+        <h3 class="project-card__title">Island Soul</h3>
+        <p class="project-card__description">Маркетплейс серебряных украшений с острова Бали</p>
+        <span class="project-card__meta">Октябрь 2021 — Ноябрь 2022 (Tiqum)</span>
+      </div>
+    </a>
+
+    <a href="projects/easytip.html" class="project-card">
+      <img class="project-card__image" src="images/EasyTip.png" alt="EasyTip">
+      <div class="project-card__content">
+        <h3 class="project-card__title">EasyTip</h3>
+        <p class="project-card__description">Международный сервис безналичных чаевых. Создан выходцами российского Netmonet.</p>
+        <span class="project-card__meta">Ноябрь 2020 — Март 2022 (фриланс)</span>
+      </div>
+    </a>
+
+    <a href="projects/standup-club.html" class="project-card">
+      <img class="project-card__image" src="images/Standup_Club_1.png" alt="Stand-Up Club #1">
+      <div class="project-card__content">
+        <h3 class="project-card__title">Stand-Up Club #1</h3>
+        <p class="project-card__description">Первый стендап-клуб в России и популярный YouTube-канал (&gt;1,3 млн подписчиков) с разными комедийными проектами</p>
+        <span class="project-card__meta">Июнь 2021 — Август 2021 (фриланс)</span>
+      </div>
+    </a>
+  </main>
+</body>
+</html>
