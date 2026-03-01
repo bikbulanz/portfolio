@@ -710,7 +710,112 @@ blockquote.quote-large {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><p style="margin:1em 2em"><a href="../index.html">← На главную</a></p><article id="f78b9520-3a6f-45c4-ad90-1612f9392f66" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="../%D0%A7%D1%82%D0%BE%20%D0%B4%D0%B5%D0%BB%D0%B0%D0%BB%20%D0%B2%20Island%20Soul/1.png"/></div><h1 class="page-title" dir="auto">Что делал в Island Soul</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="ce735f54-eda7-4dc4-a5c2-b5ac17f6061c" class="">
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ─── Design Tokens ────────────────────────────────────────────────────── */
+  :root {
+    --color-grayscale-0:   #ffffff;
+    --color-grayscale-2:   #fafafa;
+    --color-grayscale-7:   #eeeeee;
+    --color-grayscale-10:  #e5e5e5;
+    --color-grayscale-45:  #888888;
+    --color-grayscale-60:  #666666;
+    --color-grayscale-67:  #555555;
+    --color-grayscale-80:  #37352f;
+    --color-grayscale-100: #1a1a1a;
+    --color-grey-20:       rgba(55, 53, 47, 0.09);
+
+    --font-family-base: 'Manrope', -apple-system, sans-serif;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    --font-size-13: 13px;
+    --font-size-15: 15px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-20: 20px;
+    --font-size-32: 32px;
+    --font-size-40: 40px;
+
+    --line-height-20: 20px;
+    --line-height-22: 22px;
+    --line-height-24: 24px;
+    --line-height-27: 27px;
+    --line-height-30: 30px;
+    --line-height-48: 48px;
+
+    --letter-spacing-neg-064: -0.64px;
+    --letter-spacing-08:       0.8px;
+
+    --spacing-6:  6px;
+    --spacing-8:  8px;
+    --spacing-13: 13px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-60: 60px;
+
+    --radius-card:   12px;
+    --radius-avatar: 48px;
+    --width-content: 752px;
+    --opacity-80: 0.8;
+    --shadow-card-default: 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+    --shadow-card-hover:   0 8px 24px rgba(0, 0, 0, 0.10);
+    --stroke-weight-1: 1px;
+  }
+
+  /* ─── Overrides ─────────────────────────────────────────────────────────── */
+  html, body {
+    font-family: var(--font-family-base) !important;
+    color: var(--color-grayscale-80) !important;
+    background: var(--color-grayscale-0) !important;
+  }
+  @media only screen {
+    body {
+      color: var(--color-grayscale-80) !important;
+    }
+  }
+  .page-title {
+    font-size: var(--font-size-40) !important;
+    font-weight: var(--font-weight-700) !important;
+    line-height: var(--line-height-48) !important;
+    letter-spacing: 0 !important;
+    color: var(--color-grayscale-80) !important;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-family-base) !important;
+    color: var(--color-grayscale-80) !important;
+  }
+  h2 {
+    font-size: var(--font-size-20) !important;
+    font-weight: var(--font-weight-600) !important;
+    line-height: var(--line-height-30) !important;
+    letter-spacing: 0 !important;
+  }
+  p {
+    font-family: var(--font-family-base) !important;
+    font-size: var(--font-size-15) !important;
+    font-weight: var(--font-weight-400) !important;
+    line-height: var(--line-height-22) !important;
+    color: var(--color-grayscale-80) !important;
+  }
+  hr {
+    border-bottom: var(--stroke-weight-1) solid var(--color-grey-20) !important;
+    background: transparent !important;
+  }
+  a, a.visited {
+    font-family: var(--font-family-base) !important;
+    color: var(--color-grayscale-80) !important;
+  }
+  blockquote {
+    border-left-color: var(--color-grayscale-80) !important;
+  }
+</style>
+</head><body><p style="margin:1em 2em"><a href="../index.html">← На главную</a></p><article id="f78b9520-3a6f-45c4-ad90-1612f9392f66" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="../%D0%A7%D1%82%D0%BE%20%D0%B4%D0%B5%D0%BB%D0%B0%D0%BB%20%D0%B2%20Island%20Soul/1.png"/></div><h1 class="page-title" dir="auto">Что делал в Island Soul</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="ce735f54-eda7-4dc4-a5c2-b5ac17f6061c" class="">
 </p></div><div style="display:contents" dir="auto"><div id="4042310d-3c85-449e-82a1-0c120423cb8b" class="column-list"><div style="display:contents" dir="auto"><div id="28d8bef6-9604-4d6e-8356-8ebc65c41f41" style="width:43.75%" class="column"><div style="display:contents" dir="auto"><h2 id="dd8386cd-b9f8-4f8c-a4e3-e9ffb3082af5" class="">О продукте</h2></div><div style="display:contents" dir="auto"><p id="96ac0cd8-dc1d-4347-8ae6-177d97878378" class="">
 </p></div></div></div><div style="display:contents" dir="auto"><div id="6a660b32-a9d3-47ae-a97d-a6053b1da180" style="width:56.25%" class="column"><div style="display:contents" dir="auto"><p id="90b290c7-829c-471c-bab0-df475abe18e8" class="">
 </p></div><div style="display:contents" dir="auto"><p id="79d3f5d6-cc5c-4857-b392-a29fc14b7e8a" class="">Маркетплейс серебряных украшений с острова Бали</p></div></div></div></div></div><div style="display:contents" dir="auto"><p id="934d4f34-29ee-4cf2-9d19-8f9e4123d42a" class="block-color-gray">

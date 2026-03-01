@@ -9,6 +9,74 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* ─── Design Tokens → CSS Custom Properties ─────────────────────────── */
+    :root {
+      /* Colors */
+      --color-grayscale-0:   #ffffff;
+      --color-grayscale-2:   #fafafa;
+      --color-grayscale-7:   #eeeeee;
+      --color-grayscale-10:  #e5e5e5;
+      --color-grayscale-45:  #888888;
+      --color-grayscale-60:  #666666;
+      --color-grayscale-67:  #555555;
+      --color-grayscale-80:  #37352f;
+      --color-grayscale-100: #1a1a1a;
+      --color-grey-20:       rgba(55, 53, 47, 0.09);
+
+      /* Font */
+      --font-family-base: 'Manrope', -apple-system, sans-serif;
+      --font-weight-400: 400;
+      --font-weight-500: 500;
+      --font-weight-600: 600;
+      --font-weight-700: 700;
+
+      /* Font sizes */
+      --font-size-13: 13px;
+      --font-size-15: 15px;
+      --font-size-16: 16px;
+      --font-size-18: 18px;
+      --font-size-20: 20px;
+      --font-size-32: 32px;
+      --font-size-40: 40px;
+
+      /* Line heights */
+      --line-height-20: 20px;
+      --line-height-22: 22px;
+      --line-height-24: 24px;
+      --line-height-27: 27px;
+      --line-height-30: 30px;
+      --line-height-48: 48px;
+
+      /* Letter spacing */
+      --letter-spacing-neg-064: -0.64px;
+      --letter-spacing-08:       0.8px;
+
+      /* Spacing */
+      --spacing-6:  6px;
+      --spacing-8:  8px;
+      --spacing-13: 13px;
+      --spacing-24: 24px;
+      --spacing-32: 32px;
+      --spacing-60: 60px;
+
+      /* Border radius */
+      --radius-card:   12px;
+      --radius-avatar: 48px;
+
+      /* Width */
+      --width-content: 752px;
+
+      /* Opacity */
+      --opacity-80: 0.8;
+
+      /* Shadows */
+      --shadow-card-default: 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+      --shadow-card-hover:   0 8px 24px rgba(0, 0, 0, 0.10);
+
+      /* Stroke */
+      --stroke-weight-1: 1px;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -16,41 +84,44 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Manrope', -apple-system, sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      color: #1a1a1a;
-      background: #fafafa;
+      font-family: var(--font-family-base);
+      font-size: var(--font-size-16);
+      line-height: var(--line-height-24);
+      color: var(--color-grayscale-100);
+      background: var(--color-grayscale-2);
     }
 
     /* Шапка */
     .header {
       max-width: 800px;
       margin: 0 auto;
-      padding: 60px 24px 48px;
+      padding: var(--spacing-60) var(--spacing-24) 48px;
       text-align: center;
     }
 
     .header__avatar {
       width: 96px;
       height: 96px;
-      border-radius: 50%;
+      border-radius: var(--radius-avatar);
       object-fit: cover;
-      margin-bottom: 24px;
-      background: #e5e5e5;
+      margin-bottom: var(--spacing-24);
+      background: var(--color-grayscale-10);
     }
 
     .header__name {
-      margin: 0 0 8px;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      margin: 0 0 var(--spacing-8);
+      font-size: var(--font-size-32);
+      font-weight: var(--font-weight-700);
+      line-height: var(--line-height-48);
+      letter-spacing: var(--letter-spacing-neg-064);
     }
 
     .header__role {
-      margin: 0 0 24px;
-      font-size: 1.125rem;
-      color: #666;
+      margin: 0 0 var(--spacing-24);
+      font-size: var(--font-size-18);
+      line-height: var(--line-height-27);
+      font-weight: var(--font-weight-400);
+      color: var(--color-grayscale-60);
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
@@ -58,16 +129,18 @@
 
     .header__contacts {
       display: flex;
-      gap: 24px;
+      gap: var(--spacing-24);
       justify-content: center;
       flex-wrap: wrap;
     }
 
     .header__contacts a {
-      color: #1a1a1a;
+      color: var(--color-grayscale-100);
       text-decoration: none;
-      font-weight: 500;
-      opacity: 0.8;
+      font-size: var(--font-size-16);
+      font-weight: var(--font-weight-500);
+      line-height: var(--line-height-24);
+      opacity: var(--opacity-80);
       transition: opacity 0.2s;
     }
 
@@ -80,24 +153,25 @@
     .projects {
       max-width: 800px;
       margin: 0 auto;
-      padding: 0 24px 80px;
+      padding: 0 var(--spacing-24) 80px;
     }
 
     .projects__title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #888;
+      font-size: var(--font-size-16);
+      font-weight: var(--font-weight-600);
+      line-height: var(--line-height-24);
+      color: var(--color-grayscale-45);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 32px;
+      letter-spacing: var(--letter-spacing-08);
+      margin-bottom: var(--spacing-32);
     }
 
     .project-card {
-      background: #fff;
-      border-radius: 12px;
+      background: var(--color-grayscale-0);
+      border-radius: var(--radius-card);
       overflow: hidden;
-      margin-bottom: 24px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      margin-bottom: var(--spacing-24);
+      box-shadow: var(--shadow-card-default);
       transition: box-shadow 0.2s, transform 0.2s;
       text-decoration: none;
       color: inherit;
@@ -105,7 +179,7 @@
     }
 
     .project-card:hover {
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow-card-hover);
       transform: translateY(-2px);
     }
 
@@ -113,29 +187,37 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
-      background: #eee;
+      background: var(--color-grayscale-7);
     }
 
     .project-card__content {
-      padding: 24px;
+      padding: var(--spacing-24);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-8);
     }
 
     .project-card__title {
-      margin: 0 0 8px;
-      font-size: 1.25rem;
-      font-weight: 600;
+      margin: 0;
+      font-size: var(--font-size-20);
+      font-weight: var(--font-weight-600);
+      line-height: var(--line-height-30);
+      color: var(--color-grayscale-100);
     }
 
     .project-card__description {
-      margin: 0 0 12px;
-      font-size: 0.9375rem;
-      color: #555;
-      line-height: 1.5;
+      margin: 0;
+      font-size: var(--font-size-15);
+      font-weight: var(--font-weight-400);
+      line-height: var(--line-height-22);
+      color: var(--color-grayscale-67);
     }
 
     .project-card__meta {
-      font-size: 0.8125rem;
-      color: #888;
+      font-size: var(--font-size-13);
+      font-weight: var(--font-weight-400);
+      line-height: var(--line-height-20);
+      color: var(--color-grayscale-45);
     }
   </style>
 </head>

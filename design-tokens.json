@@ -1,0 +1,169 @@
+{
+  "$schema": "https://design-tokens.org/schema.json",
+  "$metadata": {
+    "name": "Руслан Бикбулатов — Design System",
+    "figmaFileKey": "ZUR2aE2QKlS4gepao7uzme",
+    "lastSynced": "2026-03-01"
+  },
+
+  "color": {
+    "$description": "Цветовая палитра — Grayscale",
+    "grayscale": {
+      "0":   { "$value": "#ffffff",   "$type": "color", "$description": "White / Фон карточек" },
+      "2":   { "$value": "#fafafa",   "$type": "color", "$description": "Page background / Фон страницы" },
+      "7":   { "$value": "#eeeeee",   "$type": "color", "$description": "Image placeholder" },
+      "10":  { "$value": "#e5e5e5",   "$type": "color", "$description": "Avatar placeholder" },
+      "45":  { "$value": "#888888",   "$type": "color", "$description": "Meta / Secondary label" },
+      "60":  { "$value": "#666666",   "$type": "color", "$description": "Subtitle / Subheading" },
+      "67":  { "$value": "#555555",   "$type": "color", "$description": "Body text" },
+      "80":  { "$value": "#37352f",   "$type": "color", "$description": "Primary text on project pages" },
+      "100": { "$value": "#1a1a1a",   "$type": "color", "$description": "Primary text on main page" }
+    },
+    "grey": {
+      "20-9": { "$value": "rgba(55,53,47,0.09)", "$type": "color", "$description": "Divider / Разделитель" }
+    }
+  },
+
+  "fontFamily": {
+    "font1": { "$value": "'Manrope', -apple-system, sans-serif", "$type": "fontFamily", "$description": "Основной шрифт" }
+  },
+
+  "fontSize": {
+    "13": { "$value": "13px", "$type": "dimension" },
+    "15": { "$value": "15px", "$type": "dimension" },
+    "16": { "$value": "16px", "$type": "dimension" },
+    "18": { "$value": "18px", "$type": "dimension" },
+    "20": { "$value": "20px", "$type": "dimension" },
+    "32": { "$value": "32px", "$type": "dimension" },
+    "40": { "$value": "40px", "$type": "dimension" }
+  },
+
+  "lineHeight": {
+    "20": { "$value": "20px", "$type": "dimension" },
+    "22": { "$value": "22px", "$type": "dimension" },
+    "24": { "$value": "24px", "$type": "dimension" },
+    "27": { "$value": "27px", "$type": "dimension" },
+    "30": { "$value": "30px", "$type": "dimension" },
+    "48": { "$value": "48px", "$type": "dimension" }
+  },
+
+  "fontWeight": {
+    "400": { "$value": 400, "$type": "number", "$description": "Regular" },
+    "500": { "$value": 500, "$type": "number", "$description": "Medium" },
+    "600": { "$value": 600, "$type": "number", "$description": "SemiBold" },
+    "700": { "$value": 700, "$type": "number", "$description": "Bold" }
+  },
+
+  "letterSpacing": {
+    "neg-064": { "$value": "-0.64px", "$type": "dimension", "$description": "Заголовок h2" },
+    "08":      { "$value": "0.8px",   "$type": "dimension", "$description": "Лейбл h4 / uppercase" }
+  },
+
+  "spacing": {
+    "6":  { "$value": "6px",  "$type": "dimension" },
+    "8":  { "$value": "8px",  "$type": "dimension" },
+    "13": { "$value": "13px", "$type": "dimension" },
+    "24": { "$value": "24px", "$type": "dimension" },
+    "32": { "$value": "32px", "$type": "dimension" },
+    "60": { "$value": "60px", "$type": "dimension" }
+  },
+
+  "borderRadius": {
+    "card":   { "$value": "12px", "$type": "dimension" },
+    "avatar": { "$value": "48px", "$type": "dimension" },
+    "tag":    { "$value": "3px",  "$type": "dimension" }
+  },
+
+  "width": {
+    "content": { "$value": "752px", "$type": "dimension", "$description": "Ширина основного контента" }
+  },
+
+  "opacity": {
+    "80": { "$value": 0.8, "$type": "number", "$description": "Ссылки в хедере" }
+  },
+
+  "strokeWeight": {
+    "1": { "$value": "1px", "$type": "dimension" }
+  },
+
+  "shadow": {
+    "card-default": {
+      "$value": "0px 1px 3px 0px rgba(0,0,0,0.06)",
+      "$type": "shadow",
+      "$description": "Тень карточки в обычном состоянии"
+    },
+    "card-hover": {
+      "$value": "0 8px 24px rgba(0,0,0,0.10)",
+      "$type": "shadow",
+      "$description": "Тень карточки при наведении"
+    }
+  },
+
+  "typography": {
+    "$description": "Типографические стили — композиты из токенов",
+    "h1": {
+      "$description": "Заголовок страницы проекта",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.40}" },
+      "fontWeight":    { "$value": "{fontWeight.700}" },
+      "lineHeight":    { "$value": "{lineHeight.48}" },
+      "letterSpacing": { "$value": "0" }
+    },
+    "h2": {
+      "$description": "Имя на главной странице",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.32}" },
+      "fontWeight":    { "$value": "{fontWeight.700}" },
+      "lineHeight":    { "$value": "{lineHeight.48}" },
+      "letterSpacing": { "$value": "{letterSpacing.neg-064}" }
+    },
+    "h3": {
+      "$description": "Заголовок карточки проекта",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.20}" },
+      "fontWeight":    { "$value": "{fontWeight.600}" },
+      "lineHeight":    { "$value": "{lineHeight.30}" },
+      "letterSpacing": { "$value": "0" }
+    },
+    "h4": {
+      "$description": "Лейбл секции (uppercase)",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.16}" },
+      "fontWeight":    { "$value": "{fontWeight.600}" },
+      "lineHeight":    { "$value": "{lineHeight.24}" },
+      "letterSpacing": { "$value": "{letterSpacing.08}" }
+    },
+    "body-l": {
+      "$description": "Описание под именем",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.18}" },
+      "fontWeight":    { "$value": "{fontWeight.400}" },
+      "lineHeight":    { "$value": "{lineHeight.27}" },
+      "letterSpacing": { "$value": "0" }
+    },
+    "body-s": {
+      "$description": "Описание в карточке",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.15}" },
+      "fontWeight":    { "$value": "{fontWeight.400}" },
+      "lineHeight":    { "$value": "{lineHeight.22}" },
+      "letterSpacing": { "$value": "0" }
+    },
+    "accent-m": {
+      "$description": "Ссылки (Telegram, Email)",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.16}" },
+      "fontWeight":    { "$value": "{fontWeight.500}" },
+      "lineHeight":    { "$value": "{lineHeight.24}" },
+      "letterSpacing": { "$value": "0" }
+    },
+    "description-m": {
+      "$description": "Мета-информация карточки (дата, работодатель)",
+      "fontFamily":    { "$value": "{fontFamily.font1}" },
+      "fontSize":      { "$value": "{fontSize.13}" },
+      "fontWeight":    { "$value": "{fontWeight.400}" },
+      "lineHeight":    { "$value": "{lineHeight.20}" },
+      "letterSpacing": { "$value": "0" }
+    }
+  }
+}
